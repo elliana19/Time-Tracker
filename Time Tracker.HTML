@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Team Time Tracker</title>
+  <script defer src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <h2>Team Login</h2>
+  <input type="email" id="email" placeholder="Company Email" />
+  <input type="password" id="password" placeholder="Password" />
+  <button onclick="login()">Login</button>
+
+  <div id="tracker" style="display:none;">
+    <h3>Welcome, <span id="userEmail"></span></h3>
+    <button onclick="logTime('Time In')">Time In</button>
+    <button onclick="logTime('Time Out')">Time Out</button>
+  </div>
+</body>
+</html>
